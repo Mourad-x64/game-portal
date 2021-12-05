@@ -1,0 +1,9 @@
+{
+	"require": {		
+		"doctrine/dbal": "*",
+		"doctrine/orm": "*",
+		"doctrine/common": "*",		
+		"symfony/console": "*",
+		"symfony/yaml": "*"
+		}
+}

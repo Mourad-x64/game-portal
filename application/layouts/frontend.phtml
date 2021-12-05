@@ -1,0 +1,169 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>    
+    <!--   meta tags   -->
+    <?php    
+    echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
+                          ->appendName('keywords', 'all,keywords,go,here')
+                          ->appendName('description', 'Good for SEO, nice description here'); 
+    ?>
+    <!--  page title  -->
+    <?php echo $this->headTitle(); ?>    
+    <!--   global css files  -->
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/style.css'),'screen'); ?>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl('fonts/stylesheet.css'),'screen'); ?>    
+    <!--  view specific css  -->
+    <?php echo $this->css(); ?> 
+    
+    <!-- jquery libs  -->
+    <?php echo $this->jQuery(); ?>
+    <!--  view specific js  -->
+    <?php echo $this->javascript(); ?>   
+    
+</head>
+<body>   
+    
+    <div class="d-main">
+        
+        <!-- header  -->
+        <div class="d-top">
+            <div class="logo"></div>
+            <!-- Social Icons -->
+            <ul class="icons">
+        	<li><a href="#"><img src="<?php echo $this->baseUrl('img/ico_f.png'); ?>" alt="" /></a></li>
+                <li><a href="#"><img src="<?php echo $this->baseUrl('img/ico_t.png'); ?>" alt="" /></a></li>
+                <li><a href="#"><img src="<?php echo $this->baseUrl('img/ico_rss.png'); ?>" alt="" /></a></li>
+            </ul>
+            <!-- Top Menu -->
+            <ul class="topmenu">
+                    <li><a href="<?php echo $this->linkTo('index','index'); ?>">Accueil</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                    <li><a href="<?php echo $this->linkTo('index','news'); ?>">Actualités</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                    <li><a href="#">Tests</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                    <li><a href="#">Dossiers</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                    <li><a href="#">New Releases</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                    <li><a href="#">Download</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                    <li><a href="#">Help</a></li>
+            </ul>            
+            <!-- login -->
+            <!-- Main Menu -->
+            <ul class="mainmenu">
+                <li><a href="<?php echo $this->linkTo('index','index'); ?>" class="menu1">Accueil</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                <li><a href="<?php echo $this->linkTo('index','news'); ?>" class="menu2">Actualités</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                <li><a href="#" class="menu3">Tests</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                <li><a href="#" class="menu4">Dossiers</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                <li><a href="#" class="menu5">Boutique</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                <li><a href="#" class="menu6">Contact</a></li>
+            </ul>
+            <!-- Search Bar -->
+            <div class="bg_subheader">
+                <div class="bg_subheader-lt">
+                    <div class="bg_subheader-rt">
+                        <ul>
+                            <li><a href="#">PC</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">XBOX 360</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">Wii</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">PS2</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">PS3</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">PSP</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">3DS</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">DS</a></li>
+                            <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                            <li><a href="#">MOBILE</a></li>
+                        </ul>
+                        <div class="d-search">
+                            <form action="#" method="get">
+                                <div class="d-search_inp">
+                                  <input type="text" name="textfield" id="textfield" />
+                                </div>
+                                <div class="btn_search">                               
+                                  <input type="submit" name="button" id="button" value="" />
+                                </div>                        	
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header end  -->
+        
+        
+        <!-- content  -->
+        <div class="d-cont">
+            
+            <?php echo $this->layout()->content; ?>
+            
+        </div>        
+        <!-- content end -->
+        
+        
+        
+        <!-- footer -->
+        <div class="bg_subheader">
+            <div class="bg_subheader-lt">
+                <div class="bg_subheader-rt">
+                    <ul>
+                        <li><a href="#">PC</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">XBOX 360</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">Wii</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">PS2</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">PS3</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">PSP</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">3DS</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">DS</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li><a href="#">MOBILE</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+
+                        <li class="foot_nav"><a href="#">Home</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li class="foot_nav"><a href="#">Forum</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li class="foot_nav"><a href="#">Videos</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li class="foot_nav"><a href="#">Cheats</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li class="foot_nav"><a href="#">New Releases</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li class="foot_nav"><a href="#">Download</a></li>
+                        <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+                        <li class="foot_nav"><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="d-bot">
+            &copy; 2012 Game Portal. All Rights Reserved.    
+            <a href="javascript:void(0)" class="btn_2top"></a>	
+        </div>
+        <!-- footer end  -->
+        
+    </div>    
+    
+        
+</body>
+</html>

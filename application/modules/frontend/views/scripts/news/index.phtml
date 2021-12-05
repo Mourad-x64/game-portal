@@ -1,0 +1,120 @@
+<!-- Path way -->
+<ul class="pathway">
+    <li><a href="#">Home</a></li>
+    <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+    <li><a href="#">Blog</a></li>
+    <li class="sep"><img src="<?php echo $this->baseUrl('img/spacer.gif'); ?>" alt="" /></li>
+    <li>Blog With Right Sidebar</li>
+</ul>
+<!-- /Path way-->    
+<!-- LeftCol -->
+<div class="cont_leftcol">
+    <!-- BlogList -->
+    <div class="greyblock">
+        <ul class="blogpost_list short">
+            <!--  -->
+            <?php foreach ($this->newsList as $news) : ?>
+            <li>
+                <img src="<?php echo $this->path.$news[0]['catchImage']; ?>" alt="" />
+                <div class="txt">
+                    <span><?php echo $this->escape($news['title']); ?></span>
+                    <h4><?php echo $this->escape($news[0]['title']); ?></h4>
+                    <div class="date"><?php echo $this->date($news[0]['date']->getTimestamp()); ?> par <a href="#">admin</a></div>
+                    <p><?php echo $this->escape($news[0]['content']); ?></p>
+                    <div class="btn_comments1">0</div>
+                    <a href="<?php echo $this->linkTo('display', 'news', NULL, array('id' => $news[0]['id'])); ?>" class="read">Read more</a>
+                </div>
+                <br class="clear" />
+            </li>
+            <?php endforeach; ?>
+            
+        </ul>
+    </div>
+    <!-- /BlogList -->    
+    <ul class="pagerblock">
+        <li><a href="#" class="btn_left2"></a></li>
+        <li class="pager">
+            <ul class="pagerblock_sub">
+                <li>1</li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/sep_pager.jpg'); ?>" alt="" /></li>
+                <li><a href="#">2</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/sep_pager.jpg'); ?>" alt="" /></li>
+                <li><a href="#">3</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/sep_pager.jpg'); ?>" alt="" /></li>
+                <li><a href="#">...</a></li>
+                <li class="sep"><img src="<?php echo $this->baseUrl('img/sep_pager.jpg'); ?>" alt="" /></li>
+                <li><a href="#">10</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="btn_right2"></a></li>
+        <li><a href="#" class="btn_lastpage">Last Page</a></li>
+    </ul>
+    <div class="clear"></div>
+</div>
+<!-- /LeftCol -->
+<!-- RightCol -->
+<div class="cont_rightcol">
+    <div class="gradientblock">
+        <!-- Popular Post -->
+        <h4>Popular Posts</h4>
+        <ul class="popular_posts">
+            <li>
+                <img src="img/pic_news1.jpg" alt="" />
+                <span>Donec sagittis euismod purus</span>
+                Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu acus.
+                <br class="clear" />
+            </li>
+            <li>
+                <img src="img/pic_news2.jpg" alt="" />
+                <span>Nam elit agna, endrerit sit</span>
+                Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque.
+                <br class="clear" />
+            </li>
+            <li>
+                <img src="img/pic_news3.jpg" alt="" />
+                <span>Sed in lacus ut enim adipiscing</span>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.
+                <br class="clear" />
+            </li>
+        </ul>
+    </div>
+    <!-- /Popular Post -->   	    	
+    <!-- Recent Comments -->
+    <div class="greyblock">
+        <h4 class="ttl">Recent Comments</h4>
+        <ul class="rec_comments_list">
+            <li><img src="img/pic_noava.jpg" alt="" />
+                <a href="#">Adam Smith</a><br />
+                <span class="date">2011-02-10 12:55:39</span><br />
+                <span class="posted">Posted a comment on:</span>
+                <br class="clear" />
+                Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis
+                in faucibus orci luctus et ultrices posuere.</li>
+            <li><img src="img/pic_noava.jpg" alt="" />
+                <a href="#">Admin</a><br />
+                <span class="date">2011-02-10 12:55:39</span><br />
+                <span class="posted">Posted a comment on:</span>
+                <br class="clear" />
+                ESuspendisse sollicitudin velit sed leo.</li>
+            <li><img src="img/pic_noava.jpg" alt="" />
+                <a href="#">Cindy Johnson</a><br />
+                <span class="date">2011-02-10 12:55:39</span><br />
+                <span class="posted">Posted a comment on:</span>
+                <br class="clear" />
+                Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. </li>					
+        </ul>
+    </div>
+    <!-- /Recent Comments -->
+    <!-- New Block -->
+    <div class="greenblock">            	
+        <div class="new_logo"></div>
+        <h4><a href="http://vimeo.com/10736308">PlayStation 3 Move Trailer: GDC 2010</a></h4>
+        <div class="cont">
+            <iframe src="http://player.vimeo.com/video/10736308?title=0&amp;byline=0&amp;portrait=0" width="285" height="158" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+    </div>
+    <!-- /New Block -->
+</div>
+<!-- /RightCol -->
+<div class="clear"></div>
+
